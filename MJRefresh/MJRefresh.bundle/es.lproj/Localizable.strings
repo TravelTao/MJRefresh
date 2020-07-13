@@ -1,0 +1,16 @@
+"MJRefreshHeaderIdleText" = "Deslizar hacia abajo para actualizar.";
+"MJRefreshHeaderPullingText" = "Soltar para actualizar ahora.";
+"MJRefreshHeaderRefreshingText" = "Actualizando...";
+
+"MJRefreshAutoFooterIdleText" = "点击或上拉加载更多";
+"MJRefreshAutoFooterRefreshingText" = "Cargando datos ...";
+"MJRefreshAutoFooterNoMoreDataText" = "Datos ha terminado de cargar";
+
+"MJRefreshBackFooterIdleText" = "Deslizar hacia arriba para cargar";
+"MJRefreshBackFooterPullingText" = "Soltar para actualizar ahora.";
+"MJRefreshBackFooterRefreshingText" = "Actualizando...";
+"MJRefreshBackFooterNoMoreDataText" = "Datos ha terminado de cargar";
+
+"MJRefreshHeaderLastTimeText" = "Actualización más reciente";
+"MJRefreshHeaderDateTodayText" = "Hoy";
+"MJRefreshHeaderNoneLastDateText" = "No registros";

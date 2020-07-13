@@ -1,0 +1,16 @@
+"MJRefreshHeaderIdleText" = "Zum Aktualisieren nach unten wischen.";
+"MJRefreshHeaderPullingText" = "Jetzt zum Aktualisieren freigeben.";
+"MJRefreshHeaderRefreshingText" = "Aktualisierung...";
+
+"MJRefreshAutoFooterIdleText" = "Klicken oder ziehen, um mehr zu laden";
+"MJRefreshAutoFooterRefreshingText" = "Daten werden geladen ...";
+"MJRefreshAutoFooterNoMoreDataText" = "Das Laden der Daten ist abgeschlossen";
+
+"MJRefreshBackFooterIdleText" = "Zum Laden nach oben wischen";
+"MJRefreshBackFooterPullingText" = "Jetzt zum Aktualisieren freigeben.";
+"MJRefreshBackFooterRefreshingText" = "Aktualisierung...";
+"MJRefreshBackFooterNoMoreDataText" = "Das Laden der Daten ist abgeschlossen";
+
+"MJRefreshHeaderLastTimeText" = "Letzte Aktualisierung";
+"MJRefreshHeaderDateTodayText" = "Heute";
+"MJRefreshHeaderNoneLastDateText" = "Kein Datensatz";

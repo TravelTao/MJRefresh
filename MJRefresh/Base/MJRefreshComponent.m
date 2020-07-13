@@ -55,14 +55,13 @@
     [self removeObservers];
     
     if (newSuperview) { // 新的父控件
-        // 记录UIScrollView
-        _scrollView = (UIScrollView *)newSuperview;
-        
         // 设置宽度
-        self.mj_w = _scrollView.mj_w;
+        self.mj_w = newSuperview.mj_w;
         // 设置位置
         self.mj_x = -_scrollView.mj_insetL;
-    
+        
+        // 记录UIScrollView
+        _scrollView = (UIScrollView *)newSuperview;
         // 设置永远支持垂直弹簧效果
         _scrollView.alwaysBounceVertical = YES;
         // 记录UIScrollView最开始的contentInset
@@ -137,7 +136,9 @@
     _state = state;
     
     // 加入主队列的目的是等setState:方法调用完毕、设置完文字后再去布局子控件
-    MJRefreshDispatchAsyncOnMainQueue([self setNeedsLayout];)
+    dispatch_async(dispatch_get_main_queue(), ^{
+        [self setNeedsLayout];
+    });
 }
 
 #pragma mark 进入刷新状态
@@ -170,7 +171,9 @@
 #pragma mark 结束刷新状态
 - (void)endRefreshing
 {
-    MJRefreshDispatchAsyncOnMainQueue(self.state = MJRefreshStateIdle;)
+    dispatch_async(dispatch_get_main_queue(), ^{
+        self.state = MJRefreshStateIdle;
+    });
 }
 
 - (void)endRefreshingWithCompletionBlock:(void (^)(void))completionBlock
@@ -225,7 +228,7 @@
 #pragma mark - 内部方法
 - (void)executeRefreshingCallback
 {
-    MJRefreshDispatchAsyncOnMainQueue({
+    dispatch_async(dispatch_get_main_queue(), ^{
         if (self.refreshingBlock) {
             self.refreshingBlock();
         }
@@ -235,12 +238,7 @@
         if (self.beginRefreshingCompletionBlock) {
             self.beginRefreshingCompletionBlock();
         }
-    })
-}
-
-#pragma mark - <<< Deprecation compatible function >>> -
-- (void)setEndRefreshingAnimateCompletionBlock:(MJRefreshComponentEndRefreshingCompletionBlock)endRefreshingAnimateCompletionBlock {
-    _endRefreshingAnimationBeginAction = endRefreshingAnimateCompletionBlock;
+    });
 }
 @end
 
@@ -256,22 +254,22 @@
     return label;
 }
 
-- (CGFloat)mj_textWidth {
+- (CGFloat)mj_textWith {
     CGFloat stringWidth = 0;
     CGSize size = CGSizeMake(MAXFLOAT, MAXFLOAT);
-    
-    if (self.attributedText) {
-        if (self.attributedText.length == 0) { return 0; }
-        stringWidth = [self.attributedText boundingRectWithSize:size
-                                                        options:NSStringDrawingUsesLineFragmentOrigin
-                                                        context:nil].size.width;
-    } else {
-        if (self.text.length == 0) { return 0; }
-        NSAssert(self.font != nil, @"请检查 mj_label's `font` 是否设置正确");
-        stringWidth = [self.text boundingRectWithSize:size
-                                              options:NSStringDrawingUsesLineFragmentOrigin
-                                           attributes:@{NSFontAttributeName:self.font}
-                                              context:nil].size.width;
+    if (self.text.length > 0) {
+#if defined(__IPHONE_OS_VERSION_MAX_ALLOWED) && __IPHONE_OS_VERSION_MAX_ALLOWED >= 70000
+        stringWidth =[self.text
+                      boundingRectWithSize:size
+                      options:NSStringDrawingUsesLineFragmentOrigin
+                      attributes:@{NSFontAttributeName:self.font}
+                      context:nil].size.width;
+#else
+        
+        stringWidth = [self.text sizeWithFont:self.font
+                             constrainedToSize:size
+                                 lineBreakMode:NSLineBreakByCharWrapping].width;
+#endif
     }
     return stringWidth;
 }

@@ -1,16 +1,17 @@
-"MJRefreshHeaderIdleText" = "아래로 당겨 새로고침";
-"MJRefreshHeaderPullingText" = "놓으면 새로고침";
-"MJRefreshHeaderRefreshingText" = "로딩중...";
 
-"MJRefreshAutoFooterIdleText" = "탭 또는 위로 당겨 로드함";
-"MJRefreshAutoFooterRefreshingText" = "로딩중...";
-"MJRefreshAutoFooterNoMoreDataText" = "더이상 데이터 없음";
+"MJRefreshHeaderIdleText" = "아래로 당겨서 새로고침";
+"MJRefreshHeaderPullingText" = "놓아서 새로고침";
+"MJRefreshHeaderRefreshingText" = "데이터 새로고침 중…";
 
-"MJRefreshBackFooterIdleText" = "위로 당겨 더 로드 가능";
-"MJRefreshBackFooterPullingText" = "놓으면 더 로드됨.";
-"MJRefreshBackFooterRefreshingText" = "로딩중...";
-"MJRefreshBackFooterNoMoreDataText" = "더이상 데이터 없음";
+"MJRefreshAutoFooterIdleText" = "클릭하거나 위로 당겨서 로딩하기";
+"MJRefreshAutoFooterRefreshingText" = "데이터 로딩 중…";
+"MJRefreshAutoFooterNoMoreDataText" = "로딩 완료";
 
-"MJRefreshHeaderLastTimeText" = "마지막 업데이트: ";
+"MJRefreshBackFooterIdleText" = "위로 당겨서 더 로딩하기";
+"MJRefreshBackFooterPullingText" = "놓아서 바로 로딩하기";
+"MJRefreshBackFooterRefreshingText" = "더 많은 데이터를 업로드 중…";
+"MJRefreshBackFooterNoMoreDataText" = "로딩 완료";
+
+"MJRefreshHeaderLastTimeText" = "마지막 업데이트 시간";
 "MJRefreshHeaderDateTodayText" = "오늘";
-"MJRefreshHeaderNoneLastDateText" = "기록 없음";
+"MJRefreshHeaderNoneLastDateText" = "해당 내역이 없습니다";

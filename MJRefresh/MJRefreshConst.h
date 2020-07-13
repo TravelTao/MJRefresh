@@ -14,7 +14,7 @@
 #endif
 
 // 过期提醒
-#define MJRefreshDeprecated(DESCRIPTION) __attribute__((deprecated(DESCRIPTION)))
+#define MJRefreshDeprecated(instead) NS_DEPRECATED(2_0, 2_0, 2_0, 2_0, instead)
 
 // 运行时objc_msgSend
 #define MJRefreshMsgSend(...) ((void (*)(void *, SEL, UIView *))objc_msgSend)(__VA_ARGS__)
@@ -24,16 +24,15 @@
 #define MJRefreshColor(r, g, b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
 
 // 文字颜色
-#define MJRefreshLabelTextColor MJRefreshColor(90, 90, 90)
+#define MJRefreshLabelTextColor MJRefreshColor(161, 167, 171)
 
 // 字体大小
-#define MJRefreshLabelFont [UIFont boldSystemFontOfSize:14]
+#define MJRefreshLabelFont [UIFont systemFontOfSize:12 weight:UIFontWeightRegular]
 
 // 常量
 UIKIT_EXTERN const CGFloat MJRefreshLabelLeftInset;
 UIKIT_EXTERN const CGFloat MJRefreshHeaderHeight;
 UIKIT_EXTERN const CGFloat MJRefreshFooterHeight;
-UIKIT_EXTERN const CGFloat MJRefreshTrailWidth;
 UIKIT_EXTERN const CGFloat MJRefreshFastAnimationDuration;
 UIKIT_EXTERN const CGFloat MJRefreshSlowAnimationDuration;
 
@@ -47,9 +46,6 @@ UIKIT_EXTERN NSString *const MJRefreshHeaderLastUpdatedTimeKey;
 UIKIT_EXTERN NSString *const MJRefreshHeaderIdleText;
 UIKIT_EXTERN NSString *const MJRefreshHeaderPullingText;
 UIKIT_EXTERN NSString *const MJRefreshHeaderRefreshingText;
-
-UIKIT_EXTERN NSString *const MJRefreshTrailerIdleText;
-UIKIT_EXTERN NSString *const MJRefreshTrailerPullingText;
 
 UIKIT_EXTERN NSString *const MJRefreshAutoFooterIdleText;
 UIKIT_EXTERN NSString *const MJRefreshAutoFooterRefreshingText;
@@ -69,11 +65,3 @@ UIKIT_EXTERN NSString *const MJRefreshHeaderNoneLastDateText;
 MJRefreshState oldState = self.state; \
 if (state == oldState) return; \
 [super setState:state];
-
-// 异步主线程执行，不强持有Self
-#define MJRefreshDispatchAsyncOnMainQueue(x) \
-__weak typeof(self) weakSelf = self; \
-dispatch_async(dispatch_get_main_queue(), ^{ \
-typeof(weakSelf) self = weakSelf; \
-{x} \
-});

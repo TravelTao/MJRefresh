@@ -1,0 +1,16 @@
+"MJRefreshHeaderIdleText" = "Przeciągnij w dół, aby odświeżyć.";
+"MJRefreshHeaderPullingText" = "Puść, aby odświeżyć.";
+"MJRefreshHeaderRefreshingText" = "Odświeżanie...";
+
+"MJRefreshAutoFooterIdleText" = "Kliknij lub przeciągnij, aby załadować więcej";
+"MJRefreshAutoFooterRefreshingText" = "Odświeżanie...";
+"MJRefreshAutoFooterNoMoreDataText" = "Dane zostały załadowane";
+
+"MJRefreshBackFooterIdleText" = "Przesuń w górę, aby załadować.";
+"MJRefreshBackFooterPullingText" = "Puść, aby odświeżyć.";
+"MJRefreshBackFooterRefreshingText" = "Odświeżanie...";
+"MJRefreshBackFooterNoMoreDataText" = "Dane zostały załadowane";
+
+"MJRefreshHeaderLastTimeText" = "statnia aktualizacja";
+"MJRefreshHeaderDateTodayText" = "dzisiaj";
+"MJRefreshHeaderNoneLastDateText" = "Nie ma zapisu";

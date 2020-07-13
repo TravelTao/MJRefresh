@@ -1,0 +1,16 @@
+"MJRefreshHeaderIdleText" = "Usap turun untuk me-refresh.";
+"MJRefreshHeaderPullingText" = "Lepaskan untuk me-refresh sekarang.";
+"MJRefreshHeaderRefreshingText" = "Me-refresh...";
+
+"MJRefreshAutoFooterIdleText" = "Klik atau tarik ke atas untuk memuat lebih banyak";
+"MJRefreshAutoFooterRefreshingText" = "Memuat data ...";
+"MJRefreshAutoFooterNoMoreDataText" = "Semua telah selesai loading";
+
+"MJRefreshBackFooterIdleText" = "Usap naik untuk memuat";
+"MJRefreshBackFooterPullingText" = "Lepaskan untuk me-refresh sekarang.";
+"MJRefreshBackFooterRefreshingText" = "Memuat data ...";
+"MJRefreshBackFooterNoMoreDataText" = "Semua telah selesai loading";
+
+"MJRefreshHeaderLastTimeText" = "Update terbaru";
+"MJRefreshHeaderDateTodayText" = "Hari ini";
+"MJRefreshHeaderNoneLastDateText" = "Tidak ada catatan";

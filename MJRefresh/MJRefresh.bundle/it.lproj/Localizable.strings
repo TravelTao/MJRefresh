@@ -1,0 +1,17 @@
+"MJRefreshHeaderIdleText" = "Scorri in basso per aggiornare.";
+"MJRefreshHeaderPullingText" = "Rilascia per aggiornare ora.";
+"MJRefreshHeaderRefreshingText" = "Aggiornamento in corso...";
+
+"MJRefreshAutoFooterIdleText" = "Haga clic o levante para cargar más";
+"MJRefreshAutoFooterRefreshingText" = "Caricamento dati ...";
+"MJRefreshAutoFooterNoMoreDataText" = "Dati ha terminato il caricamento";
+
+"MJRefreshBackFooterIdleText" = "Scorri in alto per caricare";
+"MJRefreshBackFooterPullingText" = "Rilascia per aggiornare ora.";
+"MJRefreshBackFooterRefreshingText" = "Aggiornamento in corso...";
+"MJRefreshBackFooterNoMoreDataText" = "Dati ha terminato il caricamento";
+
+"MJRefreshHeaderLastTimeText" = "Ultimo aggiornamento";
+"MJRefreshHeaderDateTodayText" = "oggi";
+"MJRefreshHeaderNoneLastDateText" = "Nessun record";
+
